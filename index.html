@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Holy Bible</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="styles/main.css">
+    </head>
+    <body>
+        <div class="header">
+            <svg id="bible_logo" data-name="bible_logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+                <title>The Holy Bible</title>
+                <path class="bible_logo" d="M426.09,25H103.22A44,44,0,0,0,59.28,69V431a44,44,0,0,0,43.95,44H426a14.68,14.68,0,0,0,14.68-14.68h0V39.68A14.68,14.68,0,0,0,426.09,25ZM191.31,171.78h44V127.72a14.68,14.68,0,0,1,29.35-.72q0,0.36,0,.72v44.06h44a14.68,14.68,0,0,1,0,29.35h-44V303.81a14.68,14.68,0,0,1-29.35,0V201.09h-44A14.68,14.68,0,0,1,191.31,171.78Zm220.1,273.88H103.22a14.68,14.68,0,1,1-.72-29.35H411.41v29.35h0Z"/>
+                <rect class="bible_box" width="500" height="500"/>
+            </svg>
+            <div class="the_holy_bible">The Holy Bible</div>
+            
+            <!-- Button to trigger modal -->
+            <div type="button" class="settings_btn" data-toggle="modal" data-target="#settingsModal"><span class="glyphicon glyphicon-cog"></span></div>
+        </div>
+        <section>
+            <!-- Settings modal -->
+            <div class="modal fade" id="settingsModal" tabindex="-1" role="dialog" aria-labelledby="settingsModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="settingsModalLabel">Settings</h4>
+                        </div>
+                        <div class="modal-body">
+                            <h3>Language</h3>
+                            <ul id="language_options">
+                                <li class="lang_btn" id="arabicsv" onclick="setTranslation('arabicsv')">Arabic</li>
+                                <li class="lang_btn" id="judson">Burmese</li>
+                                <li class="lang_btn" id="aov">Chinese</li>
+                                <li class="lang_btn" value="aov">English</li>
+                                <li class="lang_btn" value="aov">French</li>
+                                <li class="lang_btn" value="aov">Korean</li>
+                                <li class="lang_btn" value="aov">Spanish</li>
+                            </ul>
+                            <h3>Version</h3>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="content">
+            <button type="button" id="book">Book Ch<span class="glyphicon glyphicon-menu-down"></span></button>
+            <div id="bible_btns_container">
+                <div id="bible_btns">
+                    <span class="bible_btn ot">Genesis</span>
+                    <span class="bible_btn ot">Exodus</span>
+                    <span class="bible_btn ot">Leviticus</span>
+                    <span class="bible_btn ot">Numbers</span>
+                    <span class="bible_btn ot">Deuteronomy</span>
+                    <span class="bible_btn ot">Joshua</span>
+                    <span class="bible_btn ot">Judges</span>
+                    <span class="bible_btn ot">Ruth</span>
+                    <span class="bible_btn ot">I Samuel</span>
+                    <span class="bible_btn ot">II Samuel</span>
+                    <span class="bible_btn ot">I Kings</span>
+                    <span class="bible_btn ot">II Kings</span>
+                    <span class="bible_btn ot">I Chronicles</span>
+                    <span class="bible_btn ot">II Chronicles</span>
+                    <span class="bible_btn ot">Ezra</span>
+                    <span class="bible_btn ot">Nehemiah</span>
+                    <span class="bible_btn ot">Esther</span>
+                    <span class="bible_btn ot">Job</span>
+                    <span class="bible_btn ot">Psalms</span>
+                    <span class="bible_btn ot">Proverbs</span>
+                    <span class="bible_btn ot">Ecclesiastes</span>
+                    <span class="bible_btn ot">Song of Songs</span>
+                    <span class="bible_btn ot">Isaiah</span>
+                    <span class="bible_btn ot">Jeremiah</span>
+                    <span class="bible_btn ot">Lamentations</span>
+                    <span class="bible_btn ot">Ezekiel</span>
+                    <span class="bible_btn ot">Daniel</span>
+                    <span class="bible_btn ot">Hosea</span>
+                    <span class="bible_btn ot">Joel</span>
+                    <span class="bible_btn ot">Amos</span>
+                    <span class="bible_btn ot">Obadiah</span>
+                    <span class="bible_btn ot">Jonah</span>
+                    <span class="bible_btn ot">Micah</span>
+                    <span class="bible_btn ot">Nahum</span>
+                    <span class="bible_btn ot">Habakkuk</span>
+                    <span class="bible_btn ot">Zephaniah</span>
+                    <span class="bible_btn ot">Haggai</span>
+                    <span class="bible_btn ot">Zechariah</span>
+                    <span class="bible_btn ot">Malachi</span>
+                    <span class="testament_divider"></span>
+                    <span class="bible_btn nt">Matthew</span>
+                    <span class="bible_btn nt">Mark</span>
+                    <span class="bible_btn nt">Luke</span>
+                    <span class="bible_btn nt">John</span>
+                    <span class="bible_btn nt">Acts</span>
+                    <span class="bible_btn nt">Romans</span>
+                    <span class="bible_btn nt">I Corinthians</span>
+                    <span class="bible_btn nt">II Corinthians</span>
+                    <span class="bible_btn nt">Galatians</span>
+                    <span class="bible_btn nt">Ephesians</span>
+                    <span class="bible_btn nt">Philippians</span>
+                    <span class="bible_btn nt">Colossians</span>
+                    <span class="bible_btn nt">I Thessalonians</span>
+                    <span class="bible_btn nt">II Thessalonians</span>
+                    <span class="bible_btn nt">I Timothy</span>
+                    <span class="bible_btn nt">II Timothy</span>
+                    <span class="bible_btn nt">Titus</span>
+                    <span class="bible_btn nt">Philemon</span>
+                    <span class="bible_btn nt">Hebrews</span>
+                    <span class="bible_btn nt">James</span>
+                    <span class="bible_btn nt">I Peter</span>
+                    <span class="bible_btn nt">II Peter</span>
+                    <span class="bible_btn nt">I John</span>
+                    <span class="bible_btn nt">II John</span>
+                    <span class="bible_btn nt">III John</span>
+                    <span class="bible_btn nt">Jude</span>
+                    <span class="bible_btn nt">Revelation</span>
+                </div>
+                <hr>
+                <div id="chapters"></div>
+            </div>
+            <div id="scripture"></div>
+            <div id="page_btns">
+                <span class="glyphicon glyphicon-menu-left" id="previous"></span>
+                <span class="glyphicon glyphicon-menu-right" id="next"></span>
+            </div>
+        </section>
+        <div class="icon-disclaimer"><span>Bible icon made by <a href="http://www.freepik.com" title="Freepik" target="_blank">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon" target="_blank">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></span></div>
+        <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="scripts/scriptures.js"></script>
+    </body>
+</html>
