@@ -99,6 +99,7 @@ div#scripture sup {
     margin-left: 0.25rem;
 }
 
+/*
 div#bible_btns_container {
     margin: 0;
     padding: 1rem 0;
@@ -107,6 +108,7 @@ div#bible_btns_container {
     color: #a19f9f;
     z-index: 10;
 }
+*/
 
 div#bible_btns, #chapters {
     display: -webkit-flex;
